@@ -1,0 +1,40 @@
+<?php
+class Database
+{
+    private static $dbName = 'RegistrosWeb' ;
+    private static $dbHost = 'localhost' ;
+    private static $dbUsername = 'root';
+    private static $dbUserPassword = '';
+
+    private $usuario = $_POST['valorCaja1'];
+    private $contra = $_POST['valorCaja2'];
+     
+    private static $cont  = null;
+     
+    public function __construct() {
+        die('Funcion init no permitida');
+    }
+     
+    public static function connect()
+    {
+       // una sóla conexión en toda la aplicación
+       if ( null == self::$cont )
+       {     
+        try
+        {
+          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
+        }
+        catch(PDOException $e)
+        {
+          die($e->getMessage()); 
+        }
+       }
+       return self::$cont;
+    }
+     
+    public static function disconnect()
+    {
+        self::$cont = null;
+    }
+}
+?>
