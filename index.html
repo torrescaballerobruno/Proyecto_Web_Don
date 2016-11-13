@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Proteco</title>
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+<body>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js /materialize.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.modal-trigger').leanModal();
+		});
+	</script>
+
+	<div class="navbar-fixed">
+	  <nav>
+	    <div class="nav-wrapper blue white-text">
+	      <a href="#" class="brand-logo center">Proteco</a>
+	    </div>
+ 	 </nav>
+ 	 </div>
+
+ <div class="col s12 m7">
+    <h2 class="header" style="text-align: center;">¡Bienvenido!</h2>
+    <div class="card horizontal" align="center">
+      <div class="card-image">
+        <img src="img/proteco1.jpg" width="300px" height="300px">
+      </div>
+      <div class="card-stacked" style="align-self: center;">
+        <div class="card-content">
+          <a class="modal-trigger waves-effect waves-light btn" href="#modal2" style="background: gray;">Acceder</a>
+          <a class="modal-trigger waves-effect waves-light btn" href="#modal1" style="background: gray;">Salida</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Registrar Salida</h4>
+			<div class="row">
+				        <div class="input-field col s6">
+				          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+				          <label for="first_name">Usuario</label>
+				        </div>
+				    </div>
+			        <div class="row">
+				        <div class="input-field col s6">
+				          <input id="password" type="password" class="validate">
+				          <label for="password">Password</label>
+				        </div>
+				     </div>
+		</div>
+		<div class="modal-footer">
+			<a href="logoff.html" class="modal-action modal-close waves-effect waves-green btn-flat">Salir</a>
+		</div>
+	</div>
+
+	<div id="modal2" class="modal modal-fixed-footer">
+			<div class="modal-content">
+				<h4>Acceder</h4>
+					<div class="row">
+				        <div class="input-field col s6">
+				          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+				          <label for="first_name">Usuario</label>
+				        </div>
+				    </div>
+			        <div class="row">
+				        <div class="input-field col s6">
+				          <input id="password" type="password" class="validate">
+				          <label for="password">Password</label>
+				        </div>
+				     </div>
+			</div>
+			<div class="modal-footer">
+				<a href="login.html" class="modal-action modal-close waves-effect waves-green btn-flat">Acceder</a>
+			</div>
+		</div>
+
+
+ 	 <footer class="page-footer blue">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<span class="grey-text text-lighten-3" >
+                            ¿Quiénes somos?
+                        </span>
+                        <p class="grey-text text-lighten-3">
+                            El Programa de Tecnología en Cómputo busca establecer un proceso permanente, con herramientas de
+                            cómputo, para la
+                            formación de personal docente y de investigación, en las diferentes áreas de las
+                            Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes
+                            en cursos especializados y en el desarrollo de proyectos.
+                        </p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<ul>
+						<li><a href="http://proteco.mx/" target="_blank" class="grey-text text-lighten-3">Página principal</a></li>
+						<li><a href="https://www.facebook.com/proteco/?fref=ts" target="_blank" class="grey-text text-lighten-3">Facebook</a></li>
+						<li><a href="https://twitter.com/proteco?lang=es" target="_blank" class="grey-text text-lighten-3">Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<footer>&copy; 2016 Programa de Tecnología en Cómputo. Universidad Nacional Autónoma de México. Facultad de Ingeniería. Todos los derechos reservados.</footer>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+</html>
