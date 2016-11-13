@@ -14,6 +14,44 @@
 			$('.modal-trigger').leanModal();
 		});
 	</script>
+	<script>
+		function realizarAcceso(valorCaja1, valorCaja2){
+		        var parametros = {
+		                "valorCaja1" : valorCaja1,
+		                "valorCaja2" : valorCaja2
+		        };
+		        $.ajax({
+		                data:  parametros,
+		                url:   'acceder.php',
+		                type:  'post',
+		                beforeSend: function () {
+		                        $("#resultado").html("Procesando, espere por favor...");
+		                },
+		                success:  function (response) {
+		                        $("#resultado").html(response);
+		                }
+		        });
+		}
+	</script>
+	<script>
+		function realizarSalida(valorCaja1, valorCaja2){
+		        var parametros = {
+		                "valorCaja1" : valorCaja1,
+		                "valorCaja2" : valorCaja2
+		        };
+		        $.ajax({
+		                data:  parametros,
+		                url:   'salir.php',
+		                type:  'post',
+		                beforeSend: function () {
+		                        $("#resultado").html("Procesando, espere por favor...");
+		                },
+		                success:  function (response) {
+		                        $("#resultado").html(response);
+		                }
+		        });
+		}
+	</script>
 
 	<div class="navbar-fixed">
 	  <nav>
@@ -55,7 +93,8 @@
 				     </div>
 		</div>
 		<div class="modal-footer">
-			<a href="logoff.html" class="modal-action modal-close waves-effect waves-green btn-flat">Salir</a>
+			<!--a href="logoff.html" class="modal-action modal-close waves-effect waves-green btn-flat">Salir</a-->
+			<input type="button" class="modal-action modal-close waves-effect waves-green btn-flat" href="javascript:;" onclick="realizarSalida($('#first_name').val(),$('#password').val());return false;" value="Salir">
 		</div>
 	</div>
 
@@ -76,10 +115,10 @@
 				     </div>
 			</div>
 			<div class="modal-footer">
-				<a href="login.html" class="modal-action modal-close waves-effect waves-green btn-flat">Acceder</a>
+				<!--a href="login.html" class="modal-action modal-close waves-effect waves-green btn-flat">Acceder</a-->
+				<input type="button" class="modal-action modal-close waves-effect waves-green btn-flat" href="javascript:;" onclick="realizarAcceso($('#first_name').val(),$('#password').val());return false;" value="Acceder">
 			</div>
 		</div>
-
 
  	 <footer class="page-footer blue">
 		<div class="container">
