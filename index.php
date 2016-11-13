@@ -105,20 +105,20 @@
 				<h4>Acceder</h4>
 					<div class="row">
 				        <div class="input-field col s6">
-				          <input placeholder="" id="nomb_ac" type="text" class="validate">
-				          <label for="nomb_ac">Usuario</label>
+				          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+				          <label for="first_name">Usuario</label>
 				        </div>
 				    </div>
 			        <div class="row">
 				        <div class="input-field col s6">
-				          <input id="passwd" type="password" class="validate">
-				          <label for="passwd">Password</label>
+				          <input id="password" type="password" class="validate">
+				          <label for="password">Password</label>
 				        </div>
 				     </div>
 			</div>
 			<div class="modal-footer">
-				<a href="acceder.php" class="modal-action modal-close waves-effect waves-green btn-flat">Acceder</a>
-				<input type="button" class="modal-action modal-close waves-effect waves-green btn-flat" href="javascript:;" onclick="realizarAcceso($('#nomb_ac').val(),$('#passwd').val());return false;" value="Acceder">
+				<!--a href="acceder.php" class="modal-action modal-close waves-effect waves-green btn-flat">Acceder</a-->
+				<input type="button" class="modal-action modal-close waves-effect waves-green btn-flat" href="javascript:;" onclick="realizarAcceso($('#first_name').val(),$('#password').val());return false;" value="Acceder">
 			</div>
 		</div>
 

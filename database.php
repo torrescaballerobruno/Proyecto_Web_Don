@@ -5,9 +5,6 @@ class Database
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';
-
-    private $usuario = $_POST['valorCaja1'];
-    private $contra = $_POST['valorCaja2'];
      
     private static $cont  = null;
      
